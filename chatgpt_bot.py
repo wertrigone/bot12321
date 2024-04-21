@@ -4,9 +4,9 @@ import openai
 import sqlite3
 
 # Токен, который вы получили от BotFather
-TELEGRAM_TOKEN = 'TELEGRAM_TOKEN'
+TELEGRAM_TOKEN = '7113631749:AAGHS58e3uGMUw6KXlkLkzEAVVeRl7fVYdQ'
 # Ключ API OpenAI
-OPENAI_API_KEY = 'OPENAI_API_KEY'
+OPENAI_API_KEY = 'sk-proj-B1m9C6AfnYjNl7D2u7zmT3BlbkFJ98fudud8ZiVAAbFu2fFa'
 
 # Инициализация клиента OpenAI
 openai.api_key = OPENAI_API_KEY
