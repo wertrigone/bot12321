@@ -5,8 +5,8 @@ import sqlite3
 import os
 
 # Получаем токен и ключ API из переменных окружения
-TELEGRAM_TOKEN = os.getenv('7113631749:AAGHS58e3uGMUw6KXlkLkzEAVVeRl7fVYdQ')
-OPENAI_API_KEY = os.getenv('sk-proj-B1m9C6AfnYjNl7D2u7zmT3BlbkFJ98fudud8ZiVAAbFu2fFa')
+TELEGRAM_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 # Инициализация клиента OpenAI
 openai.api_key = OPENAI_API_KEY
