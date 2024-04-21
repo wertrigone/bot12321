@@ -2,11 +2,11 @@ from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 import openai
 import sqlite3
+import os
 
-# Токен, который вы получили от BotFather
-TELEGRAM_TOKEN = '7113631749:AAGHS58e3uGMUw6KXlkLkzEAVVeRl7fVYdQ'
-# Ключ API OpenAI
-OPENAI_API_KEY = 'sk-proj-B1m9C6AfnYjNl7D2u7zmT3BlbkFJ98fudud8ZiVAAbFu2fFa'
+# Получаем токен и ключ API из переменных окружения
+TELEGRAM_TOKEN = os.getenv('7113631749:AAGHS58e3uGMUw6KXlkLkzEAVVeRl7fVYdQ')
+OPENAI_API_KEY = os.getenv('sk-proj-B1m9C6AfnYjNl7D2u7zmT3BlbkFJ98fudud8ZiVAAbFu2fFa')
 
 # Инициализация клиента OpenAI
 openai.api_key = OPENAI_API_KEY
@@ -55,7 +55,7 @@ def echo(update: Update, context: CallbackContext):
 
 def main():
     # Инициализация бота
-    updater = Updater(TELEGRAM_TOKEN)
+    updater = Updater(TELEGRAM_TOKEN, use_context=True)
     dispatcher = updater.dispatcher
 
     # Обработчики команд
